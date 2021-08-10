@@ -345,3 +345,124 @@ section {
   line-height: 40px;
   letter-spacing: 1.4pt;
 }
+
+/* レスポンシブ対応 */
+@media (max-width: 670px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* utility */
+  .u-content-wrapper {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+  .u-heading {
+    font-size: 28px;
+  }
+  .u-text {
+    text-align: left;
+    padding-bottom: 32px;
+  }
+  .u-display__pc {
+    display: none;
+  }
+
+  /* header */
+  .header {
+    height: 355px;
+    padding-top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("img/header.png") 50%;
+    background-size: cover;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  .header__nav__logo {
+    font-size: 24px;
+  }
+  .header__title {
+    padding-top: 120px;
+    font-size: 64px;
+  }
+
+  /* concept */
+  .concept {
+    padding: 40px 0;
+    background: linear-gradient(#fff 75%, #ededed 25%);
+  }
+
+  /* work */
+  .work {
+    position: relative;
+    padding: 40px 0 24px;
+  }
+  .work__contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .work__content {
+    width: auto;
+    text-align: left;
+  }
+  .work__content__image {
+    height: 300px;
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+
+  /* florist */
+  .florist {
+    padding: 40px 0;
+    background: #ededed 55%;
+  }
+  .florist__persons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .florist__person {
+    width: auto;
+    padding-bottom: 80px;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .florist__person__image {
+    height: 300px;
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+
+  /* shopInformation */
+  .shopInformation {
+    padding: 40px 0;
+  }
+  .shopInformation__contents {
+    display: block;
+  }
+  .shopInformation__image,
+  .shopInformation__table {
+    width: 100%;
+  }
+
+  /* contact */
+  .contactUs {
+    padding: 40px 0 64px;
+  }
+  .btn__contact {
+    width: 280px;
+    padding-left: 50px;
+  }
+  .btn__contact::before {
+    left: 45px;
+  }
+  .btn__contact::after {
+    left: 50px;
+  }
+}
