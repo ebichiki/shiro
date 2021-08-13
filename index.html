@@ -14,11 +14,21 @@
           <div class="header__nav__logo">Shiro</div>
           <div class="hamburger-menu">
             <span class="hamburger-menu__line"></span>
+            <span class="hamburger-menu__line--dummy"></span>
           </div>
         </div>
+        <ul class="header-menu">
+          <li class="header__menu__item"><a href="#">Concept</a></li>
+          <li class="header__menu__item"><a href="#">Work</a></li>
+          <li class="header__menu__item"><a href="#">Florist</a></li>
+          <li class="header__menu__item"><a href="#">Shop information</a></li>
+          <li class="header__menu__item"><a href="#">Contact us</a></li>
+        </ul>
       </div>
-      <h1 class="header__title">Shiro</h1>
-      <p class="header__title__sub">White flower shop</p>
+      <div class="u-content-wrapper">
+        <h1 class="header__title">Shiro</h1>
+        <p class="header__title__sub">White flower shop</p>
+      </div>
     </header>
     <section class="concept">
       <div class="u-content-wrapper">
@@ -43,7 +53,6 @@
           一人一人にあったご提案をさせていただきます。</p>
         <div class="work__contents__wrapper">
           <div class="work__contents">
-            
             <div class="work__content">
               <img class="work__content__image work__image__gift" src="img/work_gift.png" alt="白い花束の写真">
               <h3 class="work__content__heading">Gift</h3>
@@ -165,6 +174,17 @@
           $('.work').addClass('arrow_display');
         }
       });
+
+      /* ハンバーガーメニュー */
+      $('.hamburger-menu').on('click', function() {
+        $('.hamburger-menu').toggleClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+      $('.header__menu__item').on('click', function() {
+        $('.hamburger-menu').removeClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+
     });
     </script>
   </body>
